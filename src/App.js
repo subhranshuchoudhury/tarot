@@ -4,7 +4,6 @@ import NoPage from './pages/NoPage';
 import Layout from './pages/Layout';
 import Result from './pages/Result';
 import FortuneCard from './pages/FortuneCard';
-import './App.css';
 import { useState } from 'react';
 
 function App() {

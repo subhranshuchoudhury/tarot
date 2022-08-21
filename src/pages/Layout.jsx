@@ -3,21 +3,29 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
     return (
         <>
-
-            <nav>
-                <ul>
-                    <button>
-                        <Link to="/">Home</Link>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <Link class="nav-link active navbar-brand" to="/">🎴 Tarot</Link>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <li>
-                        <Link to="/fortune">Fortune</Link>
-                    </li>
-                    <li>
-                        <Link to="/result">Result</Link>
-                    </li>
-                </ul>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <Link class="nav-link active" to="/">Home</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link active" to="/fortune">Fortune</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link active" to="/result">Result</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <Outlet />
+
 
         </>
     )
