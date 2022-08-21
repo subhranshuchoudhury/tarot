@@ -12,13 +12,13 @@ const Layout = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <Link class="nav-link active" to="tarot/">Home</Link>
+                                <Link class="nav-link active" to="/tarot">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link active" to="tarot/fortune">Fortune</Link>
+                                <Link class="nav-link active" to="/tarot/fortune">Fortune</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link active" to="tarot/result">Result</Link>
+                                <Link class="nav-link active" to="/tarot/result">Result</Link>
                             </li>
                         </ul>
                     </div>

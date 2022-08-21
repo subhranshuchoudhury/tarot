@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/tarot/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="fortune" element={<FortuneCard receiveData={setTarotData} />} />
           <Route path="result" element={<Result chosenData={TarotResult} />} />
