@@ -42,7 +42,7 @@ const FortuneCard = (props) => {
                 })
             }
             <button onClick={sendData}>
-                <Link to="/result">Result</Link>
+                <Link to="tarot/result">Result</Link>
             </button>
         </div>
     );
