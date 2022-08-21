@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/tarot/static/js/main.39e002ee.js",
+    "main.js": "/tarot/static/js/main.be4919c7.js",
     "index.html": "/tarot/index.html",
-    "main.39e002ee.js.map": "/tarot/static/js/main.39e002ee.js.map"
+    "main.be4919c7.js.map": "/tarot/static/js/main.be4919c7.js.map"
   },
   "entrypoints": [
-    "static/js/main.39e002ee.js"
+    "static/js/main.be4919c7.js"
   ]
 }
