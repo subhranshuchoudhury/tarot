@@ -1,0 +1,5 @@
+1. welcome page, basic information and start button
+
+2. fortune card selection page
+
+3. result page
