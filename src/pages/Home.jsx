@@ -5,6 +5,11 @@ import styles from './css/home.module.css';
 const Home = () => {
     //tarot/Assets/Other/
 
+    const playAudio = () => {
+        const audioElement = document.getElementById("audioPlayer");
+        audioElement.play();
+    }
+
 
     return (
         <div>
@@ -13,7 +18,7 @@ const Home = () => {
                 <img src={`/tarot/Assets/Other/A${parseInt(Math.random() * 3 + 1)}.jpg`} className={styles.imgWidth} alt="..."></img>
             </div>
             <Link to="/tarot/fortune">
-                <button className="btn btn-outline-dark">Let's Fortune ➡️</button>
+                <button className="btn btn-outline-dark" onClick={playAudio}>Start Fortune ➡️</button>
             </Link>
             {/* <Link to="/tarot/fortune">
                 <img src={`tarot/Assets/Other/${parseInt(Math.random() * 5 + 1)}.jpg`} className="img-fluid" alt="tarot_wallpaper">

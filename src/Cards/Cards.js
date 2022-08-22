@@ -4,7 +4,8 @@ const Card = [
         "cardImage": "tarot/Assets/Tarots/the-fool-tarot-card.webp",
         "cardIndex": 0,
         "meaning": "The Fool tarot card is the number 0 of the Major Arcana, which stands for the number of unlimited potentials. To see the Fool tarot card generally indicates that you are on the verge of an unexpected and exciting new adventure. This may require you to take a blind leap of faith.There will be a rewarding experience that will contribute to your growth as a human being. The new adventure could be a literal one and may involve traveling to a new land or territories you have never visited before.",
-        "shortMeaning": "New beginnings, innocence, adventure"
+        "shortMeaning": "New beginnings, innocence, adventure",
+        "choose": false
     },
     {
         "cardName": "The Magician",

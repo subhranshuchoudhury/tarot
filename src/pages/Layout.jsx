@@ -24,8 +24,12 @@ const Layout = () => {
                     </div>
                 </div>
             </nav>
+            <audio src="/tarot/Assets/sounds/mysterious_sound.mp3" id="audioPlayer"></audio>
+            <audio src="/tarot/Assets/sounds/magical.mp3" id="audioPlayer2"></audio>
+            <audio src="/tarot/Assets/sounds/mysterious_bg.mp3" id="audioPlayer3"></audio>
+
             <Outlet />
-            <p style={{ color: "#aaa" }}>SSC@{new Date().getFullYear()}</p>
+            <a style={{ textDecoration: "none" }} href="https://about.me/subhranshu"><p style={{ color: "#aaa" }}>SSC@{new Date().getFullYear()}</p></a>
         </>
     )
 };
