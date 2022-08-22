@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <h1>🔮 Tarot Card Reading</h1>
             <div class="text-center">
-                <img src={`tarot/Assets/Other/A${parseInt(Math.random() * 3 + 1)}.jpg`} className={styles.imgWidth} alt="..."></img>
+                <img src={`/tarot/Assets/Other/A${parseInt(Math.random() * 3 + 1)}.jpg`} className={styles.imgWidth} alt="..."></img>
             </div>
             <Link to="/tarot/fortune">
                 <button className="btn btn-outline-dark">Let's Fortune ➡️</button>
