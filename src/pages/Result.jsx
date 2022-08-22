@@ -6,7 +6,7 @@ const Result = (props) => {
             <p>Outcome</p>
             {
                 props.chosenData.map((d, index) => {
-                    return <div className='cardContainer'><div className='imgHolder'>
+                    return <div key={index} className='cardContainer'><div className='imgHolder'>
                         <img key={index} src={`/${d[0].cardImage}`} alt="card_image"></img>
 
                     </div>

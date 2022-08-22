@@ -8,17 +8,18 @@ const FortuneCard = (props) => {
     // javascript
 
     const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
-
+    const sCard = shuffle(Card);
     const [chooseCard, setChooseCard] = useState([]);
     const [counter, setCounter] = useState(0);
-    const [shuffledCard, setShuffledCard] = useState(shuffle(Card));
+    const [shuffledCard, setShuffledCard] = useState(sCard);
     const addMoreItem = (e) => {
         if (counter === 7) {
             return;
         } else {
             setCounter(counter + 1);
         }
-        setShuffledCard(shuffledCard.filter(x => !x.cardIndex.includes(e.target.id)));
+        const shuffleData = shuffledCard.filter(x => !x.cardIndex.includes(e.target.id));
+        setShuffledCard(shuffleData);
         const data = Card.filter(x => x.cardIndex.includes(e.target.id));
         setChooseCard(state => {
             return [...state, data]
@@ -45,7 +46,8 @@ const FortuneCard = (props) => {
             {
                 counter === 7 ? null :
                     shuffledCard.map((card, index) => {
-                        return <div className='cardHolder'><img src="/tarot/Assets/Other/cards_back.jpg" alt="cards_back" className='fortuneCards' onClick={addMoreItem} id={card.cardIndex} key={index}>
+                        console.log(index, card.cardIndex);
+                        return <div key={index} className='cardHolder'><img src="/tarot/Assets/Other/cards_back.jpg" alt="cards_back" className='fortuneCards' onClick={addMoreItem} id={card.cardIndex} key={index}>
                         </img>
                             {/* <b className='cardIndex'>Card {parseInt(card.cardIndex) + 1}</b> */}
                         </div>
