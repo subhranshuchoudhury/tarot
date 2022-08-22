@@ -1,0 +1,42 @@
+* {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+    font-family: 'Rubik Maze', cursive;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.imgWidth {
+    width: 200px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation-name: moveMent;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveMent {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+blockquote {
+    margin-top: 20px;
+    font-size: large;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+img {
+    margin-top: 40px;
+}

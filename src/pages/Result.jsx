@@ -1,12 +1,19 @@
 import React from 'react';
-
+import styles from './css/result.modules.css';
 const Result = (props) => {
     return (
         <div>
-            <p>Result Page</p>
+            <p>Outcome</p>
             {
                 props.chosenData.map((d, index) => {
-                    return <p key={index}>{d[0].cardName}</p>
+                    return <div className='cardContainer'><div className='imgHolder'>
+                        <img key={index} src={`/${d[0].cardImage}`} alt="card_image"></img>
+
+                    </div>
+                        <div className='aboutCard'>
+                            <h2>{d[0].cardName}</h2>
+                            <p>[<b>{d[0].shortMeaning}</b>]<br></br>{d[0].meaning}</p>
+                        </div></div>
                 })
             }
         </div>

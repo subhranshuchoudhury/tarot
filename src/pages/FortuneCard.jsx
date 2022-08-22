@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Outlet, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import styles from './css/fortune.modules.css'
 import Card from '../Cards/Cards';
 
 const FortuneCard = (props) => {
@@ -10,8 +10,14 @@ const FortuneCard = (props) => {
     const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
 
     const [chooseCard, setChooseCard] = useState([]);
+    const [counter, setCounter] = useState(0);
     const [shuffledCard, setShuffledCard] = useState(shuffle(Card));
     const addMoreItem = (e) => {
+        if (counter === 7) {
+            return;
+        } else {
+            setCounter(counter + 1);
+        }
         setShuffledCard(shuffledCard.filter(x => !x.cardIndex.includes(e.target.id)));
         const data = Card.filter(x => x.cardIndex.includes(e.target.id));
         setChooseCard(state => {
@@ -29,21 +35,29 @@ const FortuneCard = (props) => {
 
     return (
         <div>
-            <h3>Fortune</h3>
             {
-                shuffledCard.map((card, index) => {
-                    return <button onClick={addMoreItem} id={card.cardIndex} key={index}>{card.cardName}</button>
-                })
+                counter === 7 ? null :
+                    <h3>Choose 7 fortune cards!</h3>
             }
             {
-                chooseCard.map((card, index) => {
-                    // console.log(card[0].cardName);
-                    return <p key={index}>{card[0].meaning}</p>
-                })
+                <h6>Chosen {counter} out of 7 cards, Cards left {shuffledCard.length}</h6>
             }
-            <button onClick={sendData}>
-                <Link to="/tarot/result">Result</Link>
-            </button>
+            {
+                counter === 7 ? null :
+                    shuffledCard.map((card, index) => {
+                        return <div className='cardHolder'><img src="/tarot/Assets/Other/cards_back.jpg" alt="cards_back" className='fortuneCards' onClick={addMoreItem} id={card.cardIndex} key={index}>
+                        </img>
+                            {/* <b className='cardIndex'>Card {parseInt(card.cardIndex) + 1}</b> */}
+                        </div>
+                    })
+            }
+
+            <br></br>
+
+            {
+                counter === 7 ? < Link to="/tarot/result"><button type='button' className='btn btn-warning goBtn' onClick={sendData}>➡️ Reveal Fortune 🔮</button ></Link> : null
+            }
+
         </div>
     );
 }

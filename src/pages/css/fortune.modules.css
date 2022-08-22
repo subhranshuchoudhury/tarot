@@ -1,0 +1,49 @@
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.fortuneCards {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    cursor: pointer;
+    animation-name: moveMent;
+    animation-duration: 8s;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px rgb(137, 135, 135);
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveMent {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.cardHolder {
+    display: inline-block;
+}
+
+.cardIndex {
+    display: block;
+    font-family: 'Lobster', cursive;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+h6 {
+    font-family: 'Rubik Marker Hatch', cursive;
+    margin-bottom: 20px;
+}
+
+.goBtn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Lobster', cursive;
+}

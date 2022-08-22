@@ -1,0 +1,22 @@
+.cardContainer {
+    background-color: rgb(229, 229, 229);
+    margin: 10px;
+    border-radius: 23px;
+}
+
+.imgHolder {
+    display: block;
+}
+
+img {
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 23px;
+}
+
+
+.aboutCard {
+    margin: 10px;
+    display: inline-block;
+    /* width: 500px; */
+}
